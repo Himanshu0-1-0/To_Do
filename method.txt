@@ -1,0 +1,31 @@
+# fisrtly added basics like initiallzing npm, downloading body-parser and express and ejs packages 
+  and making main app.js inside which required packages, make it to listen on server 3000, adn making get request forming it empty.
+
+# as this project is made through ejs, made ejs in views folder connecting it with app.js by setting view engine to ejs 
+
+# as list.ejs will be treated as html file, connected it with static css and index.js files in public folder and added 
+  app.use(express.static("public)), for making it work, css for styles and js for purpose of static tasks like sound and eventlistners.
+
+In post req ;
+
+# now made a list in list.ejs for tasks, first input submiited by user is accessed from server using body parser, then that value push backed to
+  the corresponding key in list.ejs which is in list, which is an array, and then redirecting to get page of home which print all elemnts in array
+  one by one 
+
+# now list is comleted and left to add css styles in list and event listners and functions of checked and deleted(display none);
+# added css to the file
+
+##* tried to put sound on submit button, but it donot worked as before playing of sound, post request redirected the req to home route
+  therefore clash between app.js and index.js (sound could be heard by continuosly pressing over submit button 5 6 times)
+
+# Now for remove button, found a code to remove the li from ul (as display none method will lead to same li adjacent contrary to css pattern)
+  by getting element through id and removing the child node of its parent , now if any one click remove btn, just have to add that id to li
+
+# found a method to remove the li 
+  -firstly making all li a separate form which consists input is value of li as string , li and a submit type button to home route 
+  -giving add input and all delete input two diffrent names and hiding delete input by display none
+  -now in post req in app.js, putting if condition for diff between adding an removing
+  -in removing sec, getting index by comparing values through looping, and removing that index from array through splice
+  and the redirecting to home
+
+# added styles to remove button and the project is complete.

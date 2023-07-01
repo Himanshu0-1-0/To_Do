@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_Do</title>
+    <!-- for favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">To_Do</h1>
+        <h3 class="about_icon">About</h3>
+    </div>
+
+    <div>
+        <form action="/" method="post" class="form">
+            <input type="text" name="Input" placeholder="Type your Task here.. " class="inp" autocomplete="off">
+            <button type="submit" name="button" class="btn" >Add Task</button>
+        </form>
+    </div>
+
+    <div class="list">
+        <ul class="UL">
+            <% for(var i=0;i<New_Item.length;i++){ %>
+                <form action="/" method="post" class="form2">
+                    <input type="text" name="inp2" class="hide" value= "<%= New_Item[i] %>" >
+                    <li class="LI"><%= New_Item[i] %></li>
+                    <button type="submit" name="btn2" class="btn-2">Done</button>
+                </form>
+                
+            <% } %>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <h4>@Himanshu..!</h4>
+    </div>
+
+    <script src="S_JS/index.js"></script>
+</body>
+</html>
