@@ -14,7 +14,7 @@ app.get("/",function(req,res){
 app.post("/",function(req,res){
     if(req.body.Input){
         item = req.body.Input;
-        if(item != ""){
+        if(item.trim().length!= 0){
         items.push(item);
         }
     }
