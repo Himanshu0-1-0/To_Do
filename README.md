@@ -34,10 +34,6 @@ Welcome to the To-Do App repository! This project is a basic to-do list applicat
 
 Contributions are welcome! If you have suggestions for new features, find a bug, or want to improve the code, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
 
 
